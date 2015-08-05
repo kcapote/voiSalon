@@ -7,6 +7,7 @@
 
 <link href="css/style2.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/nivo-slider.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/menu.css" type="text/css" rel="stylesheet" media="all">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,6 +18,8 @@
 </script>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ga.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
 <script src="js/jquery.contentcarousel.js"></script>
@@ -50,6 +53,17 @@
 			controlNav : false,
 		});
 	});
+	
+	$(document).ready(function() {   
+        var sideslider = $('[data-toggle=collapse-side]');
+        var sel = sideslider.attr('data-target');
+        var sel2 = sideslider.attr('data-target-2');
+        sideslider.click(function(event){
+            $(sel).toggleClass('in');
+            $(sel2).toggleClass('out');
+        });
+    });
+	
 </script>
 
 </head>
@@ -58,7 +72,16 @@
 	<div class="header" id="header">
 		<div class="container">
 			<div class="header-logo">
-				<a href="index.html"><h1>VOI SALON AND SPA</h1></a>
+				<table>
+					<tr>
+						<td>
+							<a href="index.html"><p style="font-family: 'Arial', monospace; font-size: 30px;">VOI</p></a>
+						</td>
+						<td>
+							<a href="index.html"><p style="color:#8C8C8C; padding-left: 5px; font-family: 'Arial', monospace; font-size: 30px;">SALON AND SPA</p></a>
+						</td>
+					</tr>
+				</table>
 			</div>
 
 			<div class="social-icons">
@@ -78,56 +101,68 @@
 
 	<!-- slider -->
 
-	<div class="banner">
-		<div class="slider-wrapper theme-default">
-			<div id="slider" class="nivoSlider">
+	<div class="banner" style="z-index: -1;">
+		<div class="slider-wrapper theme-default" style="z-index: -1;">
+			<div id="slider" class="nivoSlider" style="z-index: -1;">
 				<img src="images/slider1.jpg" alt="" /> <img src="images/slider2.jpg" alt="" /> <img src="images/slider3.jpg" alt="" />
 			</div>
-
-
 		</div>
-
 	</div>
 
-
-
-
-
-	<!-- //slider -->
-	<div class="container">
-		<div class="navigation">
-			<div class="navigation-bar">
-				<div class="head-nav">
-					<span class="menu"> </span>
-					<ul class="cl-effect-1">
-						<li class="active"><a href="index.html">HOME</a></li>
-						<li><a href="about.html">ABOUT US</a></li>
-						<li><a href="products.html">SERVICES</a></li>
-						<li><a href="blog.html">LOCATION</a></li>
-						<li><a href="contact.html">GALLERY</a></li>
-						<li><a href="contact.html">CONTACT US</a></li>
-						<div class="clearfix"></div>
-					</ul>
-				</div>
-				<!-- script-for-nav -->
-				<script>
-					$("span.menu").click(function() {
-						$(".head-nav ul").slideToggle(300, function() {
-							// Animation complete.
-						});
-					});
-				</script>
-				<!-- script-for-nav -->
-				<div class="head-text">
-					<p>TEST</p>
-				</div>
-
+ 	<div class="container">
+	 	<header role="banner" class="navbar navbar-inverse">
+	        <div class="navbar-header" style="z-index: 1000;">
+	          <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+	        </div>
+	        <div class="navbar-inverse side-collapse in">
+	          <nav role="navigation" class="navbar-collapse">
+	            <ul class="nav navbar-nav cl-effect-1">
+	             	<li class="active"><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT US</a></li>
+					<li><a href="products.html">SERVICES</a></li>
+					<li><a href="blog.html">LOCATION</a></li>
+					<li><a href="contact.html">GALLERY</a></li>
+					<li><a href="contact.html">CONTACT US</a></li>
+	            </ul>
+	          </nav>
+	        </div>
+	        <div class="head-text" style="z-index: -1;">
+				<table style="width:100%">
+					<tr>
+						<td style="text-align: left; padding-left: 5px;">
+							17086 Collin Ave Sunny Isle, FL +1 305-974-0030.
+						</td>
+						<td style="text-align: right; padding-right: 5px;">
+							WWW.VOISALON.COM
+						</td>
+					</tr>
+				</table>
+				<p></p>
 			</div>
+	    </header>
+      </div>
+    
 
 
-		</div>
 
-	</div>
+<!-- 	<div class="container"> -->
+<!-- 		<div class="navigation"> -->
+<!-- 			<div class="navigation-bar"> -->
+<!-- 				<div class="head-nav"> -->
+<!-- 					<span class="menu"> </span> -->
+<!-- 					<ul class="cl-effect-1"> -->
+<!-- 						<li class="active"><a href="index.html">HOME</a></li> -->
+<!-- 						<li><a href="about.html">ABOUT US</a></li> -->
+<!-- 						<li><a href="products.html">SERVICES</a></li> -->
+<!-- 						<li><a href="blog.html">LOCATION</a></li> -->
+<!-- 						<li><a href="contact.html">GALLERY</a></li> -->
+<!-- 						<li><a href="contact.html">CONTACT US</a></li> -->
+<!-- 						<div class="clearfix"></div> -->
+<!-- 					</ul> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
 
 	<!--start-welcome-->
 	<div class="welcome">
@@ -140,8 +175,6 @@
 
 			<div class="col-md-6 welcome-left">
 				<img src="images/slider1.jpg" alt="" class="img-responsive" />
-
-
 			</div>
 			<div class="col-md-6 welcome-right">
 				<p>Exceder las expectativas de toda la familia, al proveer un servicio de belleza integral a la vanguardia de las últimas innovaciones y tendencias, respaldados por recursos de calidad comprobada, los mas reconocidos aliados comerciales y el mas calificado, ético y responsable</p>
@@ -164,76 +197,70 @@
 				<h1>
 					<span class="glyphicon glyphicon-plus rosado"></span> OUR SERVICES
 				</h1>
-
-
+				
 				<div class="col-md-4">
 					<img src="images/slider1.jpg" alt="" class="img-responsive" />
 					<p>Exceder las expectativas de toda la familia, al proveer un servicio de belleza integral a la vanguardia de las últimas innovaciones y tendencias</p>
 					<p class="border-rosado">
 						<a href="#"><span class="glyphicon glyphicon-plus rosado"></span> know more</a>
 					</p>
-
-
 				</div>
+				
 				<div class="col-md-4">
 					<img src="images/slider2.jpg" alt="" class="img-responsive" />
 					<p>Exceder las expectativas de toda la familia, al proveer un servicio de belleza integral a la vanguardia de las últimas innovaciones y tendencias</p>
 					<p class="border-rosado">
 						<a href="#"><span class="glyphicon glyphicon-plus rosado"></span> know more</a>
 					</p>
-
 				</div>
+				
 				<div class="col-md-4">
 					<img src="images/slider3.jpg" alt="" class="img-responsive" />
 					<p>Exceder las expectativas de toda la familia, al proveer un servicio de belleza integral a la vanguardia de las últimas innovaciones y tendencias</p>
 					<p class="border-rosado">
 						<a href="#"><span class="glyphicon glyphicon-plus rosado"></span> know more</a>
 					</p>
-
-
 				</div>
-
-				<div class="clearfix"></div>
-				<div class="col-md-4 ">
+				
+			    <div class="col-md-4">
 					<img src="images/slider1.jpg" alt="" class="img-responsive" />
 					<p>Exceder las expectativas de toda la familia, al proveer un servicio de belleza integral a la vanguardia de las últimas innovaciones y tendencias</p>
-					<p>
+					<p class="border-rosado">
 						<a href="#"><span class="glyphicon glyphicon-plus rosado"></span> know more</a>
 					</p>
-
-
 				</div>
-				<div class="col-md-4 ">
+				
+				<div class="col-md-4">
 					<img src="images/slider2.jpg" alt="" class="img-responsive" />
 					<p>Exceder las expectativas de toda la familia, al proveer un servicio de belleza integral a la vanguardia de las últimas innovaciones y tendencias</p>
-					<p>
+					<p class="border-rosado">
 						<a href="#"><span class="glyphicon glyphicon-plus rosado"></span> know more</a>
 					</p>
-
 				</div>
-				<div class="col-md-4 ">
+				
+				<div class="col-md-4">
 					<img src="images/slider3.jpg" alt="" class="img-responsive" />
 					<p>Exceder las expectativas de toda la familia, al proveer un servicio de belleza integral a la vanguardia de las últimas innovaciones y tendencias</p>
-					<p>
+					<p class="border-rosado">
 						<a href="#"><span class="glyphicon glyphicon-plus rosado"></span> know more</a>
 					</p>
-
-
 				</div>
+
+				
 			</div>
 		</div>
 	</div>
 
 
 	<!--start-staff-->
-	<div class="staff">
+	<div class="staff" >
 		<div class="container">
 			<div class="staff-text">
 				<h1 class="border-blanco">
 					<span class="glyphicon glyphicon-plus blanco"></span> OUR STAFF
 				</h1>
 				<div class="staff-main">
-					<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="col-md-4 col-sm-12 col-xs-12">
 
 						<P>Aenean ac urna ut neque semper maximus at et ligula. Aliquamex risus, pretiu sed pharetra efficitur sit amet ligula. urna ut neque semper maximus at et ligula urna ut neque</P>
 
@@ -243,13 +270,13 @@
 						<p>Aenean ac urna ut neque semper maximus at et ligula. Aliquamex risus, pretiu sed pharetra efficitur sit amet ligula.</p>
 
 					</div>
-					<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="col-md-5 col-sm-12 col-xs-12">
 						<div class="division1">
 							<img class="img-responsive pull-right" src="images/round.jpg" alt="" />
 						</div>
 
 					</div>
-					<div class="col-md-4 col-sm-12 col-xs-12">
+					<div class="col-md-3 col-sm-12 col-xs-12">
 
 						<P>Aenean ac urna ut neque semper maximus at et ligula. Aliquamex risus, pretiu sed pharetra efficitur sit amet ligula. urna ut neque semper maximus at et ligula urna ut neque</P>
 
@@ -274,31 +301,29 @@
 				</h1>
 				<div class="col-md-4 col-xs-12 contacto-grids-info">
 
-					<p>17086 Collin Ave Sunny Isle, FL +1 305-974-0030.</p>
+					<p>17086 Collin Ave <br> Sunny Isle, FL <br> +1 305-974-0030.</p>
 					<div class="clearfix"></div>
 
-					<p id="pregunta">Redes Sociales</p>
+					<p id="pregunta">Social Networks</p>
 					<ul>
-						<li>Facebook</li>
-						<li>Twitter</li>
-						<li>Instagram</li>
+						<li><img src="images/facebook-icon.png" alt="" /> facebook.com/voimiami</li>
+						<li><img src="images/twitter-icon.png" alt="" /> @voimiami</li>
+						<li><img src="images/instagram-icon.png" alt="" /> @voisalon_miami</li>
 
 					</ul>
 				</div>
 
 				<div class="col-md-8 col-xs-12 contacto-grids-info">
-
-
 					<form>
-						<input type="text" value="Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tu direccion de corre electronico';}" required=""> <input type="email" value="Your E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tu numero telefonico';}" required="">
-						<textarea id="message" placeholder="Tu mensaje"></textarea>
+						<input type="text" value="Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}" required="true"> 
+						<input type="email" value="Your E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your E-mail';}" required="true">
+						<textarea id="message" placeholder="Your message"></textarea>
 
 						<input type="submit" value="Submit">
 					</form>
 				</div>
 				<div class="clearfix"></div>
 			</div>
-
 		</div>
 	</div>
 
@@ -306,7 +331,16 @@
 	<div class="footer">
 		<div class="container">
 			<div class="titulo center">
-				<a href="index.html"><h1>VOI SALON AND SPA</h1></a>
+				<table style="font-family: 'Arial', monospace; font-size: 30px; width:100%">
+					<tr>
+						<td style="width:45%; text-align: right;">
+							<a href="index.html">VOI</a>
+						</td>
+						<td style="width:55%; text-align: left; padding-left: 5px;">
+							<a href="index.html" style="color:#8C8C8C;">SALON AND SPA</a>
+						</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 

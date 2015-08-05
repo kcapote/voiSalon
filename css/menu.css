@@ -1,0 +1,66 @@
+   
+  @media screen and (max-width: 768px) {
+      .side-collapse-container{
+          width:100%;
+          position:relative;
+          left:0;
+          transition:left .4s;
+      }
+      .side-collapse-container.out{
+          left:200px;
+      }
+      .side-collapse {
+          bottom:0;
+          left:0;
+          width:200px;
+          position:fixed;
+          overflow:hidden;
+          transition:width .4s;
+      }
+      .side-collapse.in {
+          width:0;
+      }
+  }
+      
+      /* Effect 1: Brackets */
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+.navigation-bar{
+	background: #666666;
+	position: absolute;
+	z-index: 999;
+	top: -3em;
+	left: 0em;
+	width: 100%;
+	padding: 0 2.5em;
+}
