@@ -431,7 +431,7 @@ span.subscribe{
 }
 /*--contacto--*/
 .contacto{
-	background-color:#848484;
+	background-image: url("../images/contact.jpg");
 	padding: 1em 0;
 }
 .contacto-grids {
