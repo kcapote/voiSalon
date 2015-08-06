@@ -740,7 +740,12 @@ pre code {
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 900px;
+  }
+}
+@media (min-width: 920px) {
+  .container {
+    width: 870px;
   }
 }
 @media (min-width: 992px) {
