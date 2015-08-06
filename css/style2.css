@@ -182,7 +182,7 @@ body{
 
 .welcome{
     background-color: #e4e4e4;
-    padding: 8em 0 2em;
+    /*padding: 8em 0 2em;*/
 
     
 }
@@ -756,7 +756,8 @@ span.subscribe{
 }
 @media(max-width:1024px){
 .header-logo {
-	width: 37.5%;
+	/*width: 37.5%;*/
+	width: 80%;
 }
 .titulo a h1{
 	
@@ -793,7 +794,8 @@ span.subscribe{
 	padding: 1.3em 0 0 0;
 }
 .header-logo {
-	width: 40%;
+	/*width: 40%;*/
+	width: 80%;
 }
 .top-nav {
 	width: 5%;
@@ -868,7 +870,8 @@ span.menu {
 }
 @media(max-width:640px){
 .header-logo {
-	width: 21%;
+	/*width: 21%;*/
+	width: 80%;
 	margin-left: 1.5em;
 }
 .header-logo  img{
@@ -897,7 +900,8 @@ span.menu {
 }
 @media(max-width:480px){
     .header-logo {
-	width: 31%;
+	/*width: 31%;*/
+	width: 100%;
 	margin-left: 0;
 }
 .titulo a h1{
@@ -927,8 +931,11 @@ span.menu {
 
 
 }
-@media(max-width:320px){
+@media(max-width:330px){
 
+ .header-logo {
+	width: 100%;
+}
 span.menu {
 	margin: 5px 0 22px 0;
 }

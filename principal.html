@@ -72,16 +72,8 @@
 	<div class="header" id="header">
 		<div class="container">
 			<div class="header-logo">
-				<table>
-					<tr>
-						<td>
-							<a href="index.html"><p style="font-family: 'Arial', monospace; font-size: 30px;">VOI</p></a>
-						</td>
-						<td>
-							<a href="index.html"><p style="color:#8C8C8C; padding-left: 5px; font-family: 'Arial', monospace; font-size: 30px;">SALON AND SPA</p></a>
-						</td>
-					</tr>
-				</table>
+				<span style="font-family: 'Arial', monospace; font-size: 30px; width:100%;"><a href="index.html" style="float: left;">VOI</a></span>
+				<span style="font-family: 'Arial', monospace; font-size: 30px; width:100%;"><a href="index.html" style="float: left; color:#8C8C8C; margin-left: 5px;"> SALON AND SPA</a></span>	
 			</div>
 
 			<div class="social-icons">
@@ -110,19 +102,19 @@
 	</div>
 
  	<div class="container">
-	 	<header role="banner" class="navbar navbar-inverse">
+	 	<header role="banner" class="navbar navbar-inverse bannerMenuPosition">
 	        <div class="navbar-header" style="z-index: 1000;">
-	          <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+	          <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left" style="margin-left: 10px;"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
 	        </div>
 	        <div class="navbar-inverse side-collapse in">
-	          <nav role="navigation" class="navbar-collapse">
+	          <nav role="navigation" class="navbar-collapse navigationMenuPosition">
 	            <ul class="nav navbar-nav cl-effect-1">
 	             	<li class="active"><a href="index.html">HOME</a></li>
-					<li><a href="about.html">ABOUT US</a></li>
-					<li><a href="products.html">SERVICES</a></li>
-					<li><a href="blog.html">LOCATION</a></li>
-					<li><a href="contact.html">GALLERY</a></li>
-					<li><a href="contact.html">CONTACT US</a></li>
+					<li><a href="#about">ABOUT US</a></li>
+					<li><a href="#services">SERVICES</a></li>
+					<li><a href="#staff">STAFF</a></li>
+					<li><a href="#">GALLERY</a></li>
+					<li><a href="#contact">CONTACT US</a></li>
 	            </ul>
 	          </nav>
 	        </div>
@@ -141,33 +133,11 @@
 			</div>
 	    </header>
       </div>
-    
-
-
-
-<!-- 	<div class="container"> -->
-<!-- 		<div class="navigation"> -->
-<!-- 			<div class="navigation-bar"> -->
-<!-- 				<div class="head-nav"> -->
-<!-- 					<span class="menu"> </span> -->
-<!-- 					<ul class="cl-effect-1"> -->
-<!-- 						<li class="active"><a href="index.html">HOME</a></li> -->
-<!-- 						<li><a href="about.html">ABOUT US</a></li> -->
-<!-- 						<li><a href="products.html">SERVICES</a></li> -->
-<!-- 						<li><a href="blog.html">LOCATION</a></li> -->
-<!-- 						<li><a href="contact.html">GALLERY</a></li> -->
-<!-- 						<li><a href="contact.html">CONTACT US</a></li> -->
-<!-- 						<div class="clearfix"></div> -->
-<!-- 					</ul> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
 
 	<!--start-welcome-->
 	<div class="welcome">
 
-		<div class=" container welcome-main">
+		<div id="about"class=" container welcome-main">
 			<h1>
 				<span class="glyphicon glyphicon-plus rosado"></span> ABOUT US
 			</h1>
@@ -193,7 +163,7 @@
 	<div class="content-middle">
 		<div class="container">
 
-			<div class=" container content-main">
+			<div id="services" class=" container content-main">
 				<h1>
 					<span class="glyphicon glyphicon-plus rosado"></span> OUR SERVICES
 				</h1>
@@ -255,7 +225,7 @@
 	<!--start-staff-->
 	<div class="staff" >
 		<div class="container">
-			<div class="staff-text">
+			<div id="staff" class="staff-text">
 				<h1 class="border-blanco">
 					<span class="glyphicon glyphicon-plus blanco"></span> OUR STAFF
 				</h1>
@@ -295,7 +265,7 @@
 	<div class="contacto">
 
 		<div class="container">
-			<div class="contacto-grids">
+			<div id="contact" class="contacto-grids">
 				<h1 class="rosado border-rosado">
 					<span class="glyphicon glyphicon-plus blanco"></span> CONTACT US
 				</h1>
@@ -331,16 +301,10 @@
 	<div class="footer">
 		<div class="container">
 			<div class="titulo center">
-				<table style="font-family: 'Arial', monospace; font-size: 30px; width:100%">
-					<tr>
-						<td style="width:45%; text-align: right;">
-							<a href="index.html">VOI</a>
-						</td>
-						<td style="width:55%; text-align: left; padding-left: 5px;">
-							<a href="index.html" style="color:#8C8C8C;">SALON AND SPA</a>
-						</td>
-					</tr>
-				</table>
+				<div class="header-logo">
+					<span style="font-family: 'Arial', monospace; font-size: 30px; width:100%;"><a href="index.html" style="float: left;">VOI</a></span>
+					<span style="font-family: 'Arial', monospace; font-size: 30px; width:100%;"><a href="index.html" style="float: left; color:#8C8C8C; margin-left: 5px;"> SALON AND SPA</a></span>	
+				</div>
 			</div>
 		</div>
 
